@@ -1,14 +1,15 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var plumber = require('gulp-plumber');
-var notify = require('gulp-notify');
-var newer = require('gulp-newer');
-var sass = require('gulp-dart-sass');
-var prefix = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var cleanCSS = require('gulp-clean-css');
-var postcss = require('gulp-postcss');
-var mqpacker = require('@lipemat/css-mqpacker');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
+const newer = require('gulp-newer');
+const sass = require('gulp-dart-sass');
+const prefix = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cleanCSS = require('gulp-clean-css');
+const postcss = require('gulp-postcss');
+const mqpacker = require('@lipemat/css-mqpacker');
+const ngrok = require('ngrok');
 
 gulp.task('browser-sync', function () {
     browserSync.init({
@@ -17,10 +18,20 @@ gulp.task('browser-sync', function () {
             baseDir: "./dist",
             directory: true
         }
+    }, async function (err, bs) {
+        const tunnel = await ngrok.connect({
+            port: bs.options.get('port'),
+            region: 'eu'
+        });
+        console.log(' ------------------------------------------------');
+        console.log(`  ngrok control panel: http://localhost:4040`);
+        console.log(`public URL running at: ${tunnel}`);
+        console.log(' ------------------------------------------------');
     });
     gulp.watch('./scss/**/*.scss', gulp.series('sass'));
     gulp.watch('./**/*.{html,css,js,php}').on('change', browserSync.reload);
-});
+})
+;
 
 // Optimize CSS just before publishing
 gulp.task('minify-css', function () {
@@ -39,7 +50,7 @@ gulp.task('js', function () {
 
 // Compile sass into CSS (/dist/css/) & auto-inject into browser
 gulp.task('sass', function () {
-    var processors = [
+    const processors = [
         mqpacker({sort: true})
     ];
     return gulp.src('./scss/**/*.scss')
