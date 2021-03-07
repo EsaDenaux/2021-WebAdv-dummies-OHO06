@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const fileinclude = require('gulp-file-include');
+const markdown = require('gulp-markdown');
 const browserSync = require('browser-sync').create();
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -10,6 +12,7 @@ const cleanCSS = require('gulp-clean-css');
 const postcss = require('gulp-postcss');
 const mqpacker = require('@lipemat/css-mqpacker');
 const ngrok = require('ngrok');
+
 
 gulp.task('browser-sync', function () {
     browserSync.init({
@@ -28,10 +31,17 @@ gulp.task('browser-sync', function () {
         console.log(`public URL running at: ${tunnel}`);
         console.log(' ------------------------------------------------');
     });
-    gulp.watch('./scss/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/html/**/*.html', gulp.series('fileinclude'));
     gulp.watch('./**/*.{html,css,js,php}').on('change', browserSync.reload);
-})
-;
+});
+
+// Include html-partials
+gulp.task('fileinclude', function() {
+    return gulp.src(['./src/html/home.html'])
+        .pipe(fileinclude())
+        .pipe(gulp.dest('./dist'));
+});
 
 // Optimize CSS just before publishing
 gulp.task('minify-css', function () {
@@ -53,7 +63,7 @@ gulp.task('sass', function () {
     const processors = [
         mqpacker({sort: true})
     ];
-    return gulp.src('./scss/**/*.scss')
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(plumber({
             errorHandler: notify.onError({
                 title: 'SASS compile error!',
@@ -69,5 +79,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('default', gulp.series('js', 'sass', 'browser-sync'));
+
+
+gulp.task('default', gulp.series('fileinclude','js', 'sass', 'browser-sync'));
 gulp.task('minify', gulp.series('minify-css'));
