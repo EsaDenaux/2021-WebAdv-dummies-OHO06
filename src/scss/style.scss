@@ -74,22 +74,6 @@ main{
   }
 }
 
-//cards
-/*.card{
-  border:0 !important;
-  border-radius: 2vw !important;
-  div{
-    margin:0;
-    padding:0;
-  }
-  .card-title{
-    background-color: $primary_color;
-  }
-  .card-text, .card-title{
-    padding: 0.5vw;
-  }
-  background-color: lighten($tertiary_color, 20%) !important;
-}*/
 
 // Link to BS4
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -97,8 +81,3 @@ main{
 // Custom code/partials
 
 //Media queries
-@media only screen and (max-width: 768px){
-  .card img{
-    content:url("https://via.placeholder.com/150x50")
-  }
-}
