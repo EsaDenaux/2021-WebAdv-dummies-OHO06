@@ -2,8 +2,11 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css";
 
 //import partials
-@import "_variables.scss";
-@import "_cards.scss";
+@import "partials/_variables";
+@import "partials/_cards";
+@import "partials/_carousel";
+@import "partials/_form";
+@import "partials/_result";
 
 // Override Bs4 variables and custom mixins
 $theme-colors: (
@@ -19,6 +22,20 @@ html body{
   font-family: $secondary_font;
 }
 
+a{
+  text-decoration: none !important;
+}
+
+footer{
+  margin-top: 10px;
+  border-top: darken($background_color, 4%) solid 2px;
+  background-color: darken($background_color, 2%);
+  text-align: center;
+  position:absolute;
+  width: 100%;
+}
+
+
 // navigation
 .navbar{
   background-color: $tertiary_color;
@@ -31,6 +48,9 @@ html body{
       color: $primary_color;
     }
   };
+  img{
+    max-width:40px;
+  }
 }
 
 //Needs to be fixed => why is the hover here working and not in the nested sass
@@ -49,6 +69,7 @@ h1{
   margin-bottom: 0;
   padding: 0;
   font-family: $secondary_font;
+  background-color: $background_color;
   h1{
     font-size: 10vw;
     text-decoration:none;

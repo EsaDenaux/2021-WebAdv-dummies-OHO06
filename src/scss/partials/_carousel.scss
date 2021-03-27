@@ -1,0 +1,39 @@
+.carousel{
+  margin: 0 0;
+  padding: 0;
+  @media only screen and (max-width: 540px){
+    .nav-item{
+      display:none;
+    }
+  }
+  .item{
+    text-align: center;
+    overflow: hidden;
+    img{
+      height:70%;
+      margin: 0 auto;
+      @media only screen and (max-width: 540px) {
+        max-height: 100%;
+        margin-left: -60%;
+      }
+    }
+  }
+
+  a{
+    color: $text_color !important;
+  }
+  .carousel-caption{
+    max-height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    h3{
+      @media only screen and (max-width: 540px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.hidden{
+  display:none;
+}
+

@@ -1,0 +1,18 @@
+form {
+  border-radius: 10px;
+  p{
+    background-color: $secondary_color;
+    color: lighten($text_color, 95%);
+    padding: 15px !important;
+  }
+  img{
+    filter:sepia(80%);
+    width:100%;
+    @media only screen and (max-width: 540px){
+      margin-top: 18px;
+    }
+  }
+  .hidden{
+    display:none;
+  }
+}
