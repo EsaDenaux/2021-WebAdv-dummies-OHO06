@@ -38,7 +38,7 @@ gulp.task('browser-sync', function () {
 
 // Include html-partials
 gulp.task('fileinclude', function() {
-    return gulp.src(['./src/html/home.html','./src/html/popculture.html','./src/html/selftest.html','./src/html/result.html', './src/html/apocalypse.html', './src/html/survivalplan.html'])
+    return gulp.src(['./src/html/home.html','./src/html/popculture.html','./src/html/selftest.html','./src/html/result.html', './src/html/apocalypse.html', './src/html/survivalplan.html', './src/html/404.html', './src/html/403.html'])
         .pipe(fileinclude())
         .pipe(gulp.dest('./dist'));
 });

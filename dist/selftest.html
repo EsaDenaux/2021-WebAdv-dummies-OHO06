@@ -2,13 +2,21 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Dead Serious</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#b5ac5f">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Dead Serious</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
+<div id="page-container">
+    <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="./home.html"><img src="assets/logo.png"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fas fa-bars"></i></span>
@@ -30,9 +38,9 @@
         </ul>
     </div>
 </nav>
-<main class="container">
-    <h1>Test yourself</h1>
-    <form method="post" action="result.html" id="selftest_form">
+    <main class="container">
+        <h1>Test yourself</h1>
+        <form method="post" action="result.html" id="selftest_form">
         <div class="row mb-4">
             <div class="col-md-8">
                 <p>1.	You wake up to find zombies have invaded your city: the news is talking about and you’ve found your neighbour in a less than desirable state. You decide it’s best to flee this pest-ridden hole of the undead. Perhaps your long-thought-dead uncle still has room in his remote cabin-in-the-woods, right? What’s the first thing you’re going to pack for the trip?</p>
@@ -144,10 +152,11 @@
 
     <button type="submit" class="btn btn-primary">Did you survive?</button>
 </form>
-</main>
-<footer>
+    </main>
+    <footer>
     <p>Author: Esa Denaux | <a href="mailto:r0383665@student.thomasmore.be">esa.denaux@student.thomasmore.be</a></p>
 </footer>
+</div>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <!--custom scripts-->

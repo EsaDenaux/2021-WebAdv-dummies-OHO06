@@ -2,13 +2,21 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Dead Serious</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#b5ac5f">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Dead Serious</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
+<div id="page-container">
+    <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="./home.html"><img src="assets/logo.png"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fas fa-bars"></i></span>
@@ -30,18 +38,18 @@
         </ul>
     </div>
 </nav>
-<main class="container">
-    <div class="jumbotron" id="jumbotron_home">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-md-7 col-xl-5"></div>
-                <div class="title_background col-8 col-md-5 col-xl-7">
-                    <h1 class="display-4">Dead Serious</h1>
+    <main class="container">
+        <div class="jumbotron" id="jumbotron_home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-md-7 col-xl-5"></div>
+                    <div class="title_background col-8 col-md-5 col-xl-7">
+                        <h1 class="display-4">Dead Serious</h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <p class="lead">Your zombie survival guide</p>
-        <svg class = img_filter xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1195.352 302.7375" style="enable-background:new 0 0 1195.352 242.19; position:relative;" xml:space="preserve">
+            <p class="lead">Your zombie survival guide</p>
+            <svg class = img_filter xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1195.352 302.7375" style="enable-background:new 0 0 1195.352 242.19; position:relative;" xml:space="preserve">
 	<g transform="scale(-1, 1) translate(-1195,0)">
 		<ellipse transform="matrix(0.0081 -1 1 0.0081 -14.3303 58.8441)" cx="22.496" cy="36.645" rx="22.493" ry="22.495"/>
         <path d="M39.35,242.19c6.554,0.001,12.059-5.104,12.463-11.736l4.379-71.433l64.34,33.739c1.853,0.971,3.838,1.432,5.795,1.432   c4.5,0,8.846-2.436,11.08-6.697c3.207-6.114,0.849-13.67-5.265-16.876l-27.935-14.648l-10.87,3.719v-9.419l-36.284-19.026   c-1.044-3.269-1.867-6.677-2.508-10.155l-5.708,0.601v-6l-5.5-4.333l9.335-6.099c-0.381-5.678-0.514-11.201-0.615-16.234H36.734   c-5.515,0-10.001-4.486-10.001-10c0-5.515,4.486-10.002,10.001-10.002h11.942c-2.593-4.413-6.542-7.496-11.2-7.605   c-8.797-0.209-19.856,7.023-21.564,22.414c-2.225,21.174-0.777,34.307,6.607,55.416c2.514,5.742,5.692,9.168,9.158,11.097   l-2.32,37.851l8.981,1.996l-9.82,11.708l-1.656,27.027c-0.423,6.89,4.82,12.819,11.712,13.24   C38.833,242.182,39.094,242.19,39.35,242.19z"/>
@@ -75,11 +83,11 @@
     <text x="0" y="262.19" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
 </svg>
 
-        <hr class="my-4">
-    </div>
-    <div>
-        <h1>Sitemap</h1>
-        <div class="row">
+            <hr class="my-4">
+        </div>
+        <div>
+            <h1>Sitemap</h1>
+            <div class="row">
     <div class="col-12 col-md-6 col-xl-3 mb-3 d-flex align-items-stretch">
         <div class="card">
             <div class="card__inner">
@@ -157,11 +165,12 @@
         </div>
     </div>
 </div>
-    </div>
-</main>
-<footer>
+        </div>
+    </main>
+    <footer>
     <p>Author: Esa Denaux | <a href="mailto:r0383665@student.thomasmore.be">esa.denaux@student.thomasmore.be</a></p>
 </footer>
+</div>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <!--custom scripts-->
