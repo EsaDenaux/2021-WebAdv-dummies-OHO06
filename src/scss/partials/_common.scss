@@ -1,0 +1,76 @@
+// general
+html body{
+  margin: 0;
+  padding: 0;
+  background-color: $background_color;
+  font-family: $secondary_font;
+  color: $text_color;
+}
+
+#page-container{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+footer{
+  bottom: 0;
+  border-top: darken($background_color, 4%) solid 2px;
+  background-color: darken($background_color, 2%);
+  text-align: center;
+  position:absolute;
+  width: 100%;
+  height: 2.5rem;
+  a{
+    color: $primary_color;
+  }
+  a:hover{
+    color: $secondary_color;
+  }
+}
+
+h1{
+  font-family: $main_font !important;
+  color: $primary_color !important;
+  font-weight: 700 !important;
+}
+
+main{
+  margin-top: 0;
+  padding: 1rem 3rem 0 3rem;
+  background-color: $background_color;
+  p{
+    margin-top:0;
+    padding-top:0;
+  }
+}
+
+// navigation
+.navbar{
+  background-color: $tertiary_color;
+  font-size: 16px;
+  border-radius: 0;
+  .nav-link, .navbar-brand, .fa-bars{
+    color: $text_color;
+    .nav-item{
+      margin-left: 10px;
+    }
+  };
+  .nav-link:hover{
+    color: $primary_color;
+  }
+  img{
+    max-width:40px;
+  }
+}
+
+// Link to BS4
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Custom code/partials
+
+//Media queries

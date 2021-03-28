@@ -1,0 +1,38 @@
+//Error Pages
+.errorpage404, .errorpage403{
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0 50%, 25% 0%);
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0 50%, 25% 0%);
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  img{
+    height: 50px;
+  }
+}
+
+.errorpage404 .content, .errorpage403 .content{
+  text-align: center;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: 80%;
+}
+
+.errorpage404{
+  background-image: url(../assets/images/errorpages/404.jpg);
+}
+
+.errorpage403{
+  background-image: url(../assets/images/errorpages/403.jpg);
+}

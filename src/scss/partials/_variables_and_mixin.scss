@@ -1,0 +1,30 @@
+// import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
+
+// color scheme
+$primary_color: #8A0303;
+$secondary_color: #660000;
+$tertiary_color: #B5AC5F;
+
+$background_color: #fafbfc;
+$text_color: #260703;
+
+
+@mixin replace-black-in-svg($destination_color){
+  @if($destination_color == $text_color){
+    filter: invert(7%) sepia(15%) saturate(4913%) hue-rotate(335deg) brightness(92%) contrast(105%);
+  }@else if ($destination_color == $secondary_color){
+    filter: invert(92%) sepia(6%) saturate(2012%) hue-rotate(6deg) brightness(89%) contrast(104%);
+  }@else if ($destination_color == $tertiary_color){
+    filter: invert(78%) sepia(63%) saturate(198%) hue-rotate(14deg) brightness(86%) contrast(89%);
+  }@else if ($destination_color == $background_color){
+    filter: invert(99%) sepia(1%) saturate(1623%) hue-rotate(179deg) brightness(93%) contrast(102%);
+  }
+}
+
+//fonts
+$main_font: "Amatic SC", cursive;
+$secondary_font: "Andika", sans-serif;
+
+

@@ -2,154 +2,19 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css";
 
 //import partials
-@import "partials/_variables";
-@import "partials/_cards";
-@import "partials/_carousel";
-@import "partials/_form";
-@import "partials/_result";
+/* import general features */
+@import "partials/_variables_and_mixin";
+@import "partials/_common";
 
-// Override Bs4 variables and custom mixins
-$theme-colors: (
-        'primary': #009CAB,
-        'danger': #F04C25
-);
+/* import css per page */
+@import "partials/_homepage";
+@import "partials/_selftestpage";
+@import "partials/_resultpage";
+@import "partials/_popculturepage";
+@import "partials/_errorpages.scss";
 
-// general
-html body{
-  margin: 0;
-  padding: 0;
-  background-color: $background_color;
-  font-family: $secondary_font;
-}
-
-#page-container{
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 3rem;
-}
-
-
-a{
-  text-decoration: none !important;
-}
-
-footer{
-  bottom: 0;
-  border-top: darken($background_color, 4%) solid 2px;
-  background-color: darken($background_color, 2%);
-  text-align: center;
-  position:absolute;
-  width: 100%;
-  height: 2.5rem;
-}
-
-
-// navigation
-.navbar{
-  background-color: $tertiary_color;
-  font-size: 1.2vw;
-  font-family: $secondary_font;
-  border-radius: 0;
-    .nav-link, .navbar-brand, .fa-bars{
-    color: $text_color;
-    :hover{
-      color: $primary_color;
-    }
-  };
-  img{
-    max-width:40px;
-  }
-}
+/* Extra features */
+@import "partials/_icons";
 
 
 
-//Needs to be fixed => why is the hover here working and not in the nested sass
-.nav-link:hover{
-  color: $primary_color;
-}
-
-//Error Pages
-.errorpage404, .errorpage403{
-  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0 50%, 25% 0%);
-  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0 50%, 25% 0%);
-  -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
-  height: 80vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  img{
-    height: 50px;
-  }
-}
-
-.errorpage404 .content, .errorpage403 .content{
-  text-align: center;
-  color: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-color: black;
-  padding: 20px;
-  border-radius: 5px;
-  opacity: 80%;
-}
-
-.errorpage404{
-  background-image: url(../assets/404.jpg);
-}
-
-.errorpage403{
-  background-image: url(../assets/403.jpg);
-}
-
-
-//General
-h1{
-  font-family: $main_font !important;
-  color: $primary_color !important;
-  font-weight: 700 !important;
-}
-
-//jumbotron
-#jumbotron_home{
-  margin-bottom: 0;
-  padding: 0;
-  font-family: $secondary_font;
-  background-color: $background_color;
-  h1{
-    font-size: 10vw;
-    text-decoration:none;
-  }
-  .title_background{
-    //background-color: $text_color;
-    border-radius: 1vw;
-  }
-  color: $text_color;
-  text-align: right;
-  .img_filter{
-     filter: $black_to_text_color;
-  }
-}
-
-main{
-  margin-top: 0;
-  padding: 1rem 3rem 0 3rem;
-  background-color: $background_color;
-  p{
-    margin-top:0;
-    padding-top:0;
-  }
-}
-
-
-// Link to BS4
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-// Custom code/partials
-
-//Media queries

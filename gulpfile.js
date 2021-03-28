@@ -45,9 +45,9 @@ gulp.task('fileinclude', function() {
 
 // Optimize CSS just before publishing
 gulp.task('minify-css', function () {
-    return gulp.src('./dist/**/*.css')
+    return gulp.src('./dist/css/style.css')
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/css'));
 });
 
 // Copy bootstrap JS-files
