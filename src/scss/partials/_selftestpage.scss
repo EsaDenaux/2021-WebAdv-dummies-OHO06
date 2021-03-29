@@ -4,6 +4,7 @@ form {
   p{
     background-color: $secondary_color;
     color: lighten($text_color, 95%);
+    padding: 15px;
   }
   img{
     filter:sepia(80%);
