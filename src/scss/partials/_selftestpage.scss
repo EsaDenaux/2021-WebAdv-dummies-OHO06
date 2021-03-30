@@ -6,14 +6,21 @@ form {
     color: lighten($text_color, 95%);
     padding: 15px;
   }
-  img{
-    filter:sepia(80%);
-    width:100%;
-    @media only screen and (max-width: 540px){
-      margin-top: 18px;
+  .img_container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img{
+      height:100%;
+      @media only screen and (max-width: 540px){
+        width:100%;
+        margin-top: 18px;
+      }
     }
   }
   .hidden{
     display:none;
   }
 }
+
+
